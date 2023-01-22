@@ -47,10 +47,12 @@ for (var i = 0; i < questions.length; i++) {
   play(currentQuestion.question, currentQuestion.answer);
 }
 
-  console.log(chalk.black("YAY! You SCORED: ", score));
-  console.log("Check out the high scores, if you should be there ping me and I'll update it");
+console.log(chalk.black("YAY! You SCORED: ", score));
+console.log("Check out the high scores, if you should be there ping me and I'll update it");
+for (var i = 0; i < highScores.length; i++) {
+  console.log(highScores[i].name + ": " + highScores[i].score);
+}
 
-  highScores.map(score => console.log(score.name, " : ", score.score));
 
 play();
 
